@@ -64,7 +64,7 @@ typedef enum {
 }
 
 - (void)prepare {
-    [self prepare:self.selector];
+    [self prepare:(SEL)[self performSelector:NSSelectorFromString(@"selector")]];
 }
 
 - (void)prepare:(SEL)selector {
